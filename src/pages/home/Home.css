@@ -27,13 +27,16 @@ body{
 .home-user-detail{
   display: flex;
   gap: 40px;
+  cursor: pointer;
 }
 
 .home-user-section{
     padding: 30px;
     height: 62%;
     overflow-y: auto;
-    overscroll-behavior-y: hidden;
+}
+.home-user-detail:hover{
+  background-color: #d9cece;
 }
 
 .home-user-icon{

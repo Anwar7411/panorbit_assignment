@@ -1,25 +1,27 @@
 import React from 'react';
 import './MenuBar.css'
+import { Link } from 'react-router-dom';
 
-const MenuBar = ({Page}) => {
+const MenuBar = ({page}) => {
+  
   return (
-    <div>
-        <div>
-            <div>
+    <div className='menubar-main-container'>
+        <div className='menubar-container'>
+            <Link to="/user" className='menubar-route-text' style={page=='Profile' ? {color:"white"} : {}}>
                 Profile
-            </div>
-            <hr />
-             <div>
+            </Link>
+            <hr  className='menubar-horizontal-line'/>
+             <Link to='/posts' className='menubar-route-text'style={page=='Posts' ? {color:"white"} : {}}> 
                   Posts
-            </div>
-            <hr />
-             <div>
+            </Link>
+            <hr className='menubar-horizontal-line' />
+             <Link to='/gallery' className='menubar-route-text' style={page=='Gallery' ? {color:"white"} : {}}>
                 Gallery
-            </div>
-            <hr />
-            <div>
+            </Link>
+            <hr className='menubar-horizontal-line' />
+            <Link to='/todo' className='menubar-route-text' style={page=='Todo' ? {color:"white"} : {}}>
                 Todo
-            </div>
+            </Link>
         </div>
     </div>
   )

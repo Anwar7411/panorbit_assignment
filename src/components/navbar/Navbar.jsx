@@ -1,7 +1,8 @@
 import { Grid } from '@mui/material'
 import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
-import Card from '../card/Card'
+import Card from '../card/Card';
+import './Navbar.css'
 
 const Navbar = ({data,Page}) => {
     const [open,setOpen] = useState(false)
