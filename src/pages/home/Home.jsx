@@ -23,23 +23,24 @@ const Home = () => {
   }
 
   return (
-    <div>
-      <div>
-        <div>
+    <div className='home-main-container'>
+      <div className='home-container'>
+        <div className='home-heading'>
           Select An Account
         </div>
+        <div className='home-user-section'>
         {
           userData.length>0 && userData.map((user)=>(
-            <div onClick={()=>handleUserClick(user)} key={user.id}>
-              <div style={{display:"flex",gap:"30px"}}>
-                 <img src={user.profilepicture} alt="profile" width={'200px'} height={'100px'}/>
+            <div onClick={()=>handleUserClick(user)} key={user.id} >
+              <div className='home-user-detail'>
+                 <img src={user.profilepicture} alt="profile" className='home-user-icon'/>
                  <p>{user.name}</p>
               </div>
               <hr />
             </div>
           )) 
         }
-
+      </div>
       </div>
     </div>
   )
