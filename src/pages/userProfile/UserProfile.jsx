@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import './UserProfile.css'
-import { Grid } from '@mui/material';
+import { Accordion, AccordionDetails, AccordionSummary, Grid, Typography } from '@mui/material';
 import MenuBar from '../../components/menubar/MenuBar';
 import Navbar from '../../components/navbar/Navbar';
+import Map from '../../components/map/Map';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import { getUserData } from '../../redux/Action';
 
 const UserProfile = () => {
-    const [data,setData] = useState({})
+    const [data,setData] = useState({});
+    const [expanded,setExpanded]=useState(false);
+
+    const dispatch = useDispatch();
 
     const userData = useSelector((store)=>store.userData)
    
@@ -15,6 +21,12 @@ const UserProfile = () => {
        let user=JSON.parse(localStorage.getItem("user"));
         setData(user);
     },[])
+
+    useEffect(()=>{
+  if(userData.length==0){
+    dispatch(getUserData());
+  }
+    },[userData])
 
 
   return (
@@ -55,6 +67,40 @@ const UserProfile = () => {
               <p>City     : <span className='profile-summery-span'>{data?.address?.city}</span> </p>
               <p>Zipcode  : <span className='profile-summery-span'>{data?.address?.zipcode}</span> </p>
                 </div>
+              </div>
+
+              <div>
+                <Map data={data}/>
+                <div className='profile-map-lat-lng'>
+                  <p>Lat : <span className='profile-summery-span'>{data?.address?.geo?.lat}</span></p>
+                  <p>Long : <span className='profile-summery-span'>{data?.address?.geo?.lng}</span></p>
+                </div>
+              </div>
+
+              <div className='chat-accordian'>
+              <Accordion expanded={expanded} onChange={()=>setExpanded(!expanded)} className='accordian-main-container' style={expanded ? {top:"-400px"}:{}}>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel2bh-content"
+          id="panel2bh-header"
+          className='accordian-heading'
+        >
+          <Typography >
+            Chats
+          </Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+         {
+          userData.length>0 && userData.map((user,i)=>(
+            <Grid container  row>
+                 <Grid item  xs={4} sm={4} md={4} lg={4}><img src={user.profilepicture} alt="" className='online-user-image'/></Grid>  
+                 <Grid item  xs={6} sm={6} md={6} lg={6}><p  className='online-user-name'>{user.name}</p></Grid> 
+                 <Grid item  xs={2} sm={2} md={2} lg={2}><div className='online-user-status' style={i==2 || i==3 || i==6 || i==7 || i==5? {backgroundColor:"green"}:{}}></div></Grid> 
+            </Grid>
+          ))
+         }
+        </AccordionDetails>
+      </Accordion>
               </div>
             </Grid>
           </Grid>
