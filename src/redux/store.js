@@ -4,6 +4,7 @@ import { Reducer} from "./Reducer"
 
 const composeEnhancer = window._REDUX_DEVTOOLS_EXTENSION_COMPOSE_ || compose;
 
+//creating store with middleware using redux thunk
 const store = legacy_createStore(
   Reducer,
   composeEnhancer(applyMiddleware(thunk))

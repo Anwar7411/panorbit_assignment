@@ -1,109 +1,125 @@
-.profile-main-container{
-    display: flex;
-    gap: 60px;
+.profile-main-container {
+  display: flex;
+  gap: 60px;
 }
-.profile-menubar-content{
-    width:25%;
-}
-
-.profile-nav-content{
-    width: 100%;
-    padding-right: 50px;
+.profile-menubar-content {
+  width: 25%;
 }
 
-.bottom-nav-hr-line{
-    margin-top: 20px;
-    color: gray;
+.profile-nav-content {
+  width: 100%;
+  padding-right: 50px;
 }
 
-.profile-horizontal-line{
-    width: 1px;
-    height: 700px;
-    background-color: gray;
-    margin-top: 20px;
+.bottom-nav-hr-line {
+  margin-top: 20px;
+  color: gray;
 }
 
-.profile-summery-container{
- margin-left: 25px;
- display: grid;
- justify-content: center;
- align-items: center;
- text-align: center;
+.profile-horizontal-line {
+  width: 1px;
+  height: 700px;
+  background-color: gray;
+  margin-top: 20px;
 }
 
-.profile-image{
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    margin-top: 20px;
-    margin-left: 50px;
+.profile-summery-container {
+  margin-left: 25px;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
-.profile-summery-container>h2{
-    color: #545454;
-}
-.profile-summery-container p{
-    color: #b2a1a1;
-    font-size: 18px;
-    font-weight: 500;
+.profile-image {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  margin-top: 20px;
+  margin-left: 50px;
 }
 
-.profile-summery-span{
+.profile-summery-container > h2 {
+  color: #545454;
+}
+.profile-summery-container p {
+  color: #b2a1a1;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.profile-summery-span {
   color: #545454;
   font-weight: 500;
 }
 
-.profile-summery-container-hr{
-    width: 250px;
-    color: #545454;
+.profile-summery-container-hr {
+  width: 250px;
+  color: #545454;
 }
 
-.profile-map-lat-lng{
-   display: flex;
-   justify-content: flex-end;
-   gap:20px
+.profile-map-lat-lng {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
 }
 
-.profile-map-lat-lng>p{
-    color: #b2a1a1;
+.profile-map-lat-lng > p {
+  color: #b2a1a1;
 }
 
-.comming-soon-div{
-    width: 400px;
-    margin: auto;
-    margin-top: 200px;
+.comming-soon-div {
+  width: 400px;
+  margin: auto;
+  margin-top: 200px;
 }
 
-.comming-soon-div img{
-width: 300px;
+.comming-soon-div img {
+  width: 300px;
 }
 
-.chat-accordian{
-    width: 300px;
-    position: absolute;
-    right: 40px;
-    margin-top: 20px;
+.chat-accordian {
+  width: 300px;
+  position: absolute;
+  right: 40px;
+  margin-top: 20px;
 }
 
-.online-user-image{
-    width: 40px;
-    height: 30px;
-    border-radius: 50%;
+.online-user-image {
+  width: 40px;
+  height: 30px;
+  border-radius: 50%;
 }
 
-.online-user-name{
+.online-user-name {
   margin-top: 3px;
 }
 
-.online-user-status{
-    width:8px;
-    height: 8px;
-    border: 1px solid grey;
-    border-radius: 50%;
-    margin-top: 5px;
+.online-user-status {
+  width: 8px;
+  height: 8px;
+  border: 1px solid grey;
+  border-radius: 50%;
+  margin-top: 5px;
 }
 
-.accordian-main-container .accordian-heading{
-    background-color: #2c65c8;
-    border-radius: 15px;
+.accordian-main-container .accordian-heading {
+  background-color: #2c65c8;
+  border-radius: 15px;
+}
+
+.accordian-text {
+  color: #ffff;
+  font-weight: 500;
+  font-size: 20px;
+}
+
+.address-info-container > h2 {
+  color: #545454;
+}
+
+.address-info-container p {
+  color: #b2a1a1;
+  margin-left: 40px;
+  font-size: 18px;
 }

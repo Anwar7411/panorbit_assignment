@@ -1,5 +1,6 @@
 import * as types from './ActionTypes';
 
+//initial state in store 
 const initialState = {
   userData: [],
   isloading:false,

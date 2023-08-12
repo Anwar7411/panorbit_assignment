@@ -1,25 +1,25 @@
-.menubar-main-container{
-    width: 90%;
-    background-color: #3d58c8;
-    margin: 100px 0px 100px 60px ;
-    height: 800px;
-    border-radius: 30px;
+.menubar-main-container {
+  width: 90%;
+  background-color: #3d58c8;
+  margin: 100px 0px 100px 60px;
+  height: 800px;
+  border-radius: 30px;
 }
 
-.menubar-container{
-    display: grid;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    padding-top: 200px;
+.menubar-container {
+  display: grid;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding-top: 200px;
 }
 
-.menubar-route-text{
-    font-size: 20px;
-    font-weight: 500;
-    color: #a2a1e3;
-    text-decoration-line: none;
+.menubar-route-text {
+  font-size: 20px;
+  font-weight: 500;
+  color: #a2a1e3;
+  text-decoration-line: none;
 }
-.menubar-horizontal-line{
-    width: 200%;
+.menubar-horizontal-line {
+  width: 200%;
 }

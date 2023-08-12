@@ -2,11 +2,13 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getUserData } from "../../redux/Action";
 import { useNavigate } from "react-router-dom";
+import CircularProgress from '@mui/material/CircularProgress';
 import "./Home.css";
 
 const Home = () => {
   //getting state value from store using useSelector
   const userData = useSelector((store) => store.userData);
+  const isLoading = useSelector((store)=>store.isloading)
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -21,6 +23,11 @@ const Home = () => {
     localStorage.setItem("user", JSON.stringify(user));
     navigate("/user");
   };
+
+    //if data fetching loader will be displayed
+  if(isLoading){
+    return <CircularProgress sx={{marginTop:"200px"}}/>
+  }
 
   return (
     <div className="home-main-container">
