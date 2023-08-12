@@ -13,14 +13,15 @@ const Navbar = ({data,page}) => {
 
   return (
         <div className='navbar-container'>
-         <Grid container row sx={{justifyContent:"space-between"}}>
-            <Grid item>{page}</Grid>
-            <Grid item > 
-            <img src={data?.profilepicture} alt="profile"  onClick={handleIconClick} className='navbar-icon'/>
+         <Grid container row justifyContent={'space-between'}>
+            <Grid item className='navbar-page-title'>{page}</Grid>
+            <Grid item  className='navbar-icon-container' onClick={handleIconClick} style={{cursor:"pointer"}}> 
+            <img src={data?.profilepicture} alt="profile" className='navbar-icon'/>
+            <p>{data?.name}</p>
             </Grid>
-        </Grid>
+         </Grid>
         {
-            open ? <Card  data={data}/> : ""
+            open ? <Card  data={data} setOpen={setOpen}/> : ""
         }
         </div>
   )

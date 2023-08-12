@@ -1,20 +1,23 @@
 
-body{
-    background-image: url('https://img.freepik.com/premium-photo/purple-white-waves-background-with-white-wave-background_916191-5569.jpg');
+
+.home-main-container{
+  background-image: url('./../../../image/backgroundImage.jpeg');
     background-size:     cover;                    
     background-repeat:   no-repeat;
     background-position: center center;
 }
 
 .home-container{
-    width: 40%;
-    height: 550px;
+    display: inline-block;
+    width: 35%;
+    height: 500px;
     margin: auto;
     border: 1px solid grey;
-    margin-top: 8%;
     border-radius: 8%;
+    margin-top: 130px;
     background-color: aliceblue;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+   margin-left: 500px;
 }
 
 .home-heading{
@@ -57,7 +60,7 @@ body{
   }
 
   ::-webkit-scrollbar {
-    width: 15px;
+    width: 12px;
   }
 
   ::-webkit-scrollbar-thumb {
