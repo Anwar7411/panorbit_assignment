@@ -18,13 +18,13 @@ const UserProfile = () => {
 console.log("dddddd",data)
 
   return (
-    <div>
-        <div>
+    <div className='profile-main-container'>
+        <div className='profile-menubar-content'>
           <MenuBar  page={'Profile'} />
         </div>
-        <div>
+        <div className='profile-nav-content'>
           <Navbar data={data} page={'Profile'} />
-          <Grid container>
+          {/* <Grid container>
             <Grid item>
             <img src={data?.profilepicture} alt="profile" />
             <h1>{data?.name}</h1>
@@ -53,7 +53,7 @@ console.log("dddddd",data)
                 </div>
               </div>
             </Grid>
-          </Grid>
+          </Grid> */}
         </div>
     </div>
   )

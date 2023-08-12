@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import Card from '../card/Card';
 import './Navbar.css'
 
-const Navbar = ({data,Page}) => {
+const Navbar = ({data,page}) => {
     const [open,setOpen] = useState(false)
 
     const handleIconClick=()=>{
@@ -12,11 +12,11 @@ const Navbar = ({data,Page}) => {
     }
 
   return (
-        <div>
-         <Grid container row>
-            <Grid item>{Page}</Grid>
-            <Grid item> 
-            <img src={data?.profilepicture} alt="profile"  onClick={handleIconClick}/>
+        <div className='navbar-container'>
+         <Grid container row sx={{justifyContent:"space-between"}}>
+            <Grid item>{page}</Grid>
+            <Grid item > 
+            <img src={data?.profilepicture} alt="profile"  onClick={handleIconClick} className='navbar-icon'/>
             </Grid>
         </Grid>
         {

@@ -1,0 +1,13 @@
+.profile-main-container{
+    display: flex;
+    gap: 60px;
+    border:1px solid red;
+}
+.profile-menubar-content{
+    width:25%;
+}
+
+.profile-nav-content{
+    width: 100%;
+    padding-right: 50px;
+}
