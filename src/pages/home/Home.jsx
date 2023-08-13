@@ -8,7 +8,7 @@ import "./Home.css";
 const Home = () => {
   //getting state value from store using useSelector
   const userData = useSelector((store) => store.userData);
-  const isLoading = useSelector((store)=>store.isloading)
+  const isLoading = useSelector((store) => store.isloading)
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -24,9 +24,9 @@ const Home = () => {
     navigate("/user");
   };
 
-    //if data fetching loader will be displayed
-  if(isLoading){
-    return <CircularProgress sx={{marginTop:"200px"}}/>
+  //if data fetching loader will be displayed
+  if (isLoading) {
+    return <CircularProgress className="loader" />
   }
 
   return (

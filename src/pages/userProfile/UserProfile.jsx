@@ -38,7 +38,7 @@ const UserProfile = () => {
 
   //if data fetching loader will be displayed
   if (isLoading) {
-    return <CircularProgress sx={{ marginTop: "200px" }} />;
+    return <CircularProgress className="loader" />;
   }
 
   return (
@@ -339,7 +339,7 @@ const UserProfile = () => {
               </div>
             </div>
 
-            <div>
+            <div className="profile-map-div">
               <Map data={data} />
               <div className="profile-map-lat-lng">
                 <p>

@@ -21,7 +21,12 @@
   text-decoration-line: none;
 }
 .menubar-horizontal-line {
-  width: 200%;
+  width: 180%;
+}
+
+.menubar-with-arrow-icon {
+  display: flex;
+  justify-content: space-between;
 }
 
 @media screen and (max-width: 1200px) {

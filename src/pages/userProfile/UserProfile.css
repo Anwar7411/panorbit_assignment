@@ -48,7 +48,7 @@
 .profile-info-summery-Grid-container .profile-info-username {
   color: #b2a1a1;
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .profile-info-summery-Grid-container .profile-info-divider {
@@ -57,6 +57,7 @@
 
 .profile-info-summery-Grid-container .profile-summery-span {
   color: #545454;
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -73,12 +74,21 @@
 
 .profile-map-lat-lng > p {
   color: #b2a1a1;
+  font-size: 18px;
 }
 
 .comming-soon-div {
   width: 400px;
   margin: auto;
   margin-top: 200px;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 200px;
+  margin-left: 700px;
 }
 
 .comming-soon-div img {
@@ -127,24 +137,31 @@
   margin-top: 7px;
 }
 
+.profile-map-div {
+  margin-top: 20px;
+}
+
 .address-info-container > h2 {
   color: #545454;
 }
 
-.profile-summery-span{
+.profile-summery-span {
   color: #545454;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .profile-address-summery-Grid-container .profile-address-info {
   color: #b2a1a1;
   margin-left: 40px;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .address-info-container .profile-address-summery-Grid-container {
   width: 350px;
   text-align: center;
-  height: 50px;
+  height: 40px;
 }
 
 .profile-address-summery-Grid-container .profile-info-divider {
