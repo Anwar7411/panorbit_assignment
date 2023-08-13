@@ -48,7 +48,7 @@
 .profile-info-summery-Grid-container .profile-info-username {
   color: #b2a1a1;
   font-size: 18px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .profile-info-summery-Grid-container .profile-info-divider {
@@ -57,7 +57,7 @@
 
 .profile-info-summery-Grid-container .profile-summery-span {
   color: #545454;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
 
@@ -147,14 +147,14 @@
 
 .profile-summery-span {
   color: #545454;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
 
 .profile-address-summery-Grid-container .profile-address-info {
   color: #b2a1a1;
   margin-left: 40px;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
 
