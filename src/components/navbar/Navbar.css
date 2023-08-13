@@ -23,3 +23,9 @@
   font-weight: 500;
   margin-top: 10px;
 }
+
+@media screen and (max-width: 1200px) {
+  .navbar-container {
+    margin-top: 10%;
+  }
+}

@@ -12,7 +12,7 @@ import Navbar from "../../components/navbar/Navbar";
 import Map from "../../components/map/Map";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { getUserData } from "../../redux/Action";
-import CircularProgress from '@mui/material/CircularProgress';
+import CircularProgress from "@mui/material/CircularProgress";
 import ChatBubbleOutlineIcon from "@mui/icons-material/ChatBubbleOutline";
 
 const UserProfile = () => {
@@ -21,7 +21,7 @@ const UserProfile = () => {
 
   const dispatch = useDispatch();
   const userData = useSelector((store) => store.userData);
-  const isLoading = useSelector((store)=>store.isloading)
+  const isLoading = useSelector((store) => store.isloading);
 
   //useEffect for getting single user which profile need to be view
   useEffect(() => {
@@ -37,8 +37,8 @@ const UserProfile = () => {
   }, [userData]);
 
   //if data fetching loader will be displayed
-  if(isLoading){
-    return <CircularProgress sx={{marginTop:"200px"}}/>
+  if (isLoading) {
+    return <CircularProgress sx={{ marginTop: "200px" }} />;
   }
 
   return (
@@ -69,44 +69,166 @@ const UserProfile = () => {
             />
             <h2>{data?.name}</h2>
             <div>
-              <p>
-                UserName :{" "}
-                <span className="profile-summery-span">{data?.username}</span>{" "}
-              </p>
-              <p>
-                e-mail :{" "}
-                <span className="profile-summery-span">{data?.email}</span>{" "}
-              </p>
-              <p>
-                Phone :{" "}
-                <span className="profile-summery-span">{data?.phone}</span>{" "}
-              </p>
-              <p>
-                Website :{" "}
-                <span className="profile-summery-span">{data?.website}</span>{" "}
-              </p>
+              <Grid
+                container
+                row
+                className="profile-info-summery-Grid-container"
+              >
+                <Grid item xs={4} sm={4} md={4} lg={4}>
+                  <p className="profile-info-username">UserName</p>
+                </Grid>
+                <Grid
+                  item
+                  xs={1}
+                  sm={1}
+                  md={1}
+                  lg={1}
+                  className="profile-info-divider"
+                >
+                  :
+                </Grid>
+                <Grid item xs={7} sm={7} md={7} lg={7}>
+                  <p className="profile-summery-span">{data?.username}</p>
+                </Grid>
+              </Grid>
+              <Grid
+                container
+                row
+                className="profile-info-summery-Grid-container"
+              >
+                <Grid item xs={4} sm={4} md={4} lg={4}>
+                  <p className="profile-info-username">e-mail</p>
+                </Grid>
+                <Grid
+                  item
+                  xs={1}
+                  sm={1}
+                  md={1}
+                  lg={1}
+                  className="profile-info-divider"
+                >
+                  :
+                </Grid>
+                <Grid item xs={7} sm={7} md={7} lg={7}>
+                  <p className="profile-summery-span">{data?.email}</p>
+                </Grid>
+              </Grid>
+              <Grid
+                container
+                row
+                className="profile-info-summery-Grid-container"
+              >
+                <Grid item xs={4} sm={4} md={4} lg={4}>
+                  <p className="profile-info-username">Phone</p>
+                </Grid>
+                <Grid
+                  item
+                  xs={1}
+                  sm={1}
+                  md={1}
+                  lg={1}
+                  className="profile-info-divider"
+                >
+                  :
+                </Grid>
+                <Grid item xs={7} sm={7} md={7} lg={7}>
+                  <p className="profile-summery-span">{data?.phone}</p>
+                </Grid>
+              </Grid>
+              <Grid
+                container
+                row
+                className="profile-info-summery-Grid-container"
+              >
+                <Grid item xs={4} sm={4} md={4} lg={4}>
+                  <p className="profile-info-username">Website</p>
+                </Grid>
+                <Grid
+                  item
+                  xs={1}
+                  sm={1}
+                  md={1}
+                  lg={1}
+                  className="profile-info-divider"
+                >
+                  :
+                </Grid>
+                <Grid item xs={7} sm={7} md={7} lg={7}>
+                  <p className="profile-summery-span">{data?.website}</p>
+                </Grid>
+              </Grid>
             </div>
             <hr className="profile-summery-container-hr" />
             <h2>Company</h2>
             <div>
-              <p>
-                Name :{" "}
-                <span className="profile-summery-span">
-                  {data?.company?.name}
-                </span>{" "}
-              </p>
-              <p>
-                catchPhrase :{" "}
-                <span className="profile-summery-span">
-                  {data?.company?.catchPhrase}
-                </span>{" "}
-              </p>
-              <p>
-                bs :{" "}
-                <span className="profile-summery-span">
-                  {data?.company?.bs}
-                </span>{" "}
-              </p>
+              <Grid
+                container
+                row
+                className="profile-info-summery-Grid-container"
+              >
+                <Grid item xs={4} sm={4} md={4} lg={4}>
+                  <p className="profile-info-username">Name</p>
+                </Grid>
+                <Grid
+                  item
+                  xs={1}
+                  sm={1}
+                  md={1}
+                  lg={1}
+                  className="profile-info-divider"
+                >
+                  :
+                </Grid>
+                <Grid item xs={7} sm={7} md={7} lg={7}>
+                  <p className="profile-summery-span">{data?.company?.name}</p>
+                </Grid>
+              </Grid>
+              <Grid
+                container
+                row
+                className="profile-info-summery-Grid-container"
+              >
+                <Grid item xs={4} sm={4} md={4} lg={4}>
+                  <p className="profile-info-username">catchPhrase</p>
+                </Grid>
+                <Grid
+                  item
+                  xs={1}
+                  sm={1}
+                  md={1}
+                  lg={1}
+                  className="profile-info-divider"
+                >
+                  :
+                </Grid>
+                <Grid item xs={7} sm={7} md={7} lg={7}>
+                  <p className="profile-summery-span">
+                    {data?.company?.catchPhrase}
+                  </p>
+                </Grid>
+              </Grid>
+              <Grid
+                container
+                row
+                className="profile-info-summery-Grid-container"
+              >
+                <Grid item xs={4} sm={4} md={4} lg={4}>
+                  <p className="profile-info-username">bs</p>
+                </Grid>
+                <Grid
+                  item
+                  xs={1}
+                  sm={1}
+                  md={1}
+                  lg={1}
+                  className="profile-info-divider"
+                >
+                  :
+                </Grid>
+                <Grid item xs={7} sm={7} md={7} lg={7}>
+                  <p className="profile-summery-span">{data?.company?.bs}</p>
+                </Grid>
+              </Grid>
             </div>
           </Grid>
           {/* displaying vertical line or divider with the following Grid */}
@@ -118,30 +240,102 @@ const UserProfile = () => {
             <div className="address-info-container">
               <h2>Address :</h2>
               <div>
-                <p>
-                  Street :{" "}
-                  <span className="profile-summery-span">
-                    {data?.address?.street}
-                  </span>{" "}
-                </p>
-                <p>
-                  Suite :{" "}
-                  <span className="profile-summery-span">
-                    {data?.address?.suite}
-                  </span>{" "}
-                </p>
-                <p>
-                  City :{" "}
-                  <span className="profile-summery-span">
-                    {data?.address?.city}
-                  </span>{" "}
-                </p>
-                <p>
-                  Zipcode :{" "}
-                  <span className="profile-summery-span">
-                    {data?.address?.zipcode}
-                  </span>{" "}
-                </p>
+                <Grid
+                  container
+                  row
+                  className="profile-address-summery-Grid-container"
+                >
+                  <Grid item xs={4} sm={4} md={4} lg={4}>
+                    <p className="profile-address-info">Street</p>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={1}
+                    sm={1}
+                    md={1}
+                    lg={1}
+                    className="profile-info-divider"
+                  >
+                    :
+                  </Grid>
+                  <Grid item xs={7} sm={7} md={7} lg={7}>
+                    <p className="profile-summery-span">
+                      {data?.address?.street}
+                    </p>
+                  </Grid>
+                </Grid>
+                <Grid
+                  container
+                  row
+                  className="profile-address-summery-Grid-container"
+                >
+                  <Grid item xs={4} sm={4} md={4} lg={4}>
+                    <p className="profile-address-info">Suite</p>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={1}
+                    sm={1}
+                    md={1}
+                    lg={1}
+                    className="profile-info-divider"
+                  >
+                    :
+                  </Grid>
+                  <Grid item xs={7} sm={7} md={7} lg={7}>
+                    <p className="profile-summery-span">
+                      {data?.address?.suite}
+                    </p>
+                  </Grid>
+                </Grid>
+                <Grid
+                  container
+                  row
+                  className="profile-address-summery-Grid-container"
+                >
+                  <Grid item xs={4} sm={4} md={4} lg={4}>
+                    <p className="profile-address-info">City</p>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={1}
+                    sm={1}
+                    md={1}
+                    lg={1}
+                    className="profile-info-divider"
+                  >
+                    :
+                  </Grid>
+                  <Grid item xs={7} sm={7} md={7} lg={7}>
+                    <p className="profile-summery-span">
+                      {data?.address?.city}
+                    </p>
+                  </Grid>
+                </Grid>
+                <Grid
+                  container
+                  row
+                  className="profile-address-summery-Grid-container"
+                >
+                  <Grid item xs={4} sm={4} md={4} lg={4}>
+                    <p className="profile-address-info">Zipcode</p>
+                  </Grid>
+                  <Grid
+                    item
+                    xs={1}
+                    sm={1}
+                    md={1}
+                    lg={1}
+                    className="profile-info-divider"
+                  >
+                    :
+                  </Grid>
+                  <Grid item xs={7} sm={7} md={7} lg={7}>
+                    <p className="profile-summery-span">
+                      {data?.address?.zipcode}
+                    </p>
+                  </Grid>
+                </Grid>
               </div>
             </div>
 
@@ -149,13 +343,13 @@ const UserProfile = () => {
               <Map data={data} />
               <div className="profile-map-lat-lng">
                 <p>
-                  Lat :{" "}
+                  Lat :
                   <span className="profile-summery-span">
                     {data?.address?.geo?.lat}
                   </span>
                 </p>
                 <p>
-                  Long :{" "}
+                  Long :
                   <span className="profile-summery-span">
                     {data?.address?.geo?.lng}
                   </span>
@@ -178,10 +372,7 @@ const UserProfile = () => {
                 >
                   <Grid container row spacing={2}>
                     <Grid item>
-                      {" "}
-                      <ChatBubbleOutlineIcon
-                        sx={{ color: "white", marginTop: "7px" }}
-                      />
+                      <ChatBubbleOutlineIcon className="chat-icon" />
                     </Grid>
                     <Grid item className="accordian-text">
                       Chats
