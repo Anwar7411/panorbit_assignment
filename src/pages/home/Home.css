@@ -7,7 +7,7 @@
 
 .home-container {
   display: inline-block;
-  width: 35%;
+  width: 30%;
   height: 500px;
   margin: auto;
   border: 1px solid grey;
@@ -33,7 +33,7 @@
 
 .home-user-section {
   padding: 30px;
-  height: 62%;
+  height: 60%;
   overflow-y: auto;
 }
 .home-user-detail:hover {
@@ -64,4 +64,18 @@
 ::-webkit-scrollbar-thumb {
   background: rgb(181, 176, 176);
   border-radius: 10px;
+}
+
+@media screen and (max-width:1200px){
+  .home-container {
+    display: inline-block;
+    width: 40%;
+    height: 400px;
+    margin-left: 300px;
+  }
+  .home-user-section {
+    padding: 30px;
+    height: 50%;
+    overflow-y: auto;
+  }
 }
