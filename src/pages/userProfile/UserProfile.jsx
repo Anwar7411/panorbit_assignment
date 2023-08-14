@@ -383,14 +383,14 @@ const UserProfile = () => {
                   {userData.length > 0 &&
                     userData.map((user, i) => (
                       <Grid container row>
-                        <Grid item xs={4} sm={4} md={4} lg={4}>
+                        <Grid item xs={3} sm={3} md={3} lg={3}>
                           <img
                             src={user.profilepicture}
                             alt=""
                             className="online-user-image"
                           />
                         </Grid>
-                        <Grid item xs={6} sm={6} md={6} lg={6}>
+                        <Grid item xs={7} sm={7} md={7} lg={7}>
                           <p className="online-user-name">{user.name}</p>
                         </Grid>
                         <Grid item xs={2} sm={2} md={2} lg={2}>
