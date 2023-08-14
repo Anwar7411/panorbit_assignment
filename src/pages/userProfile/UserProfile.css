@@ -190,4 +190,9 @@
     text-align: center;
     height: 40px;
   }
+  .profile-info-summery-Grid-container .profile-summery-span {
+    color: #545454;
+    font-size: 16px;
+    font-weight: 500;
+  }
 }

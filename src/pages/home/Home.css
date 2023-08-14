@@ -11,7 +11,7 @@
   height: 550px;
   margin: auto;
   border: 1px solid grey;
-  border-radius: 8%;
+  border-radius: 4%;
   margin-top: 70px;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -23,6 +23,8 @@
   color: #565050;
   font-size: 24px;
   padding: 50px;
+  background-color: #f6f6f6;
+  border-radius: 15px;
   font-weight: 500;
 }
 .home-user-detail {

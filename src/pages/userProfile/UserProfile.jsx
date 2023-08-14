@@ -370,7 +370,7 @@ const UserProfile = () => {
                   id="panel2bh-header"
                   className="accordian-heading"
                 >
-                  <Grid container row spacing={2}>
+                  <Grid container row spacing={1}>
                     <Grid item>
                       <ChatBubbleOutlineIcon className="chat-icon" />
                     </Grid>
