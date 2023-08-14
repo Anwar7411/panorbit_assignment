@@ -9,8 +9,8 @@
 .menubar-container {
   display: grid;
   gap: 10px;
-  justify-content: center;
-  align-items: center;
+  width: 100px;
+  margin: auto;
   padding-top: 200px;
 }
 
@@ -21,17 +21,17 @@
   text-decoration-line: none;
 }
 .menubar-horizontal-line {
-  width: 180%;
+  width: 170%;
 }
 
 .menubar-with-arrow-icon {
   display: flex;
-  justify-content: space-between;
+  gap:20px
 }
 
 @media screen and (max-width: 1200px) {
   .menubar-horizontal-line {
-    width: 150%;
+    width: 120%;
   }
   .menubar-main-container {
     margin: 80px 0px 100px 60px;
