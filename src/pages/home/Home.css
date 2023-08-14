@@ -7,15 +7,15 @@
 
 .home-container {
   display: inline-block;
-  width: 30%;
-  height: 500px;
+  width: 40%;
+  height: 550px;
   margin: auto;
   border: 1px solid grey;
   border-radius: 8%;
-  margin-top: 130px;
-  background-color: aliceblue;
+  margin-top: 70px;
+  background-color: white;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-  margin-left: 500px;
+  margin-left: 450px;
 }
 
 .home-heading {
@@ -27,7 +27,7 @@
 }
 .home-user-detail {
   display: flex;
-  gap: 40px;
+  gap: 12px;
   cursor: pointer;
 }
 
@@ -37,7 +37,7 @@
   overflow-y: auto;
 }
 .home-user-detail:hover {
-  background-color: #d9cece;
+  background-color: #f1e8e8;
 }
 .loader {
   display: flex;
@@ -47,8 +47,8 @@
   margin-left: 700px;
 }
 .home-user-icon {
-  width: 60px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
 }
 
@@ -64,7 +64,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 7px;
 }
 
 ::-webkit-scrollbar-thumb {
